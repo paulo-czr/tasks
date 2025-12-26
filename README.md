@@ -73,7 +73,8 @@ Exemplo de JSON para Criação (POST):
 
 1. Clone o repositório:
 ```
-git clone [https://github.com/paulo-czr/task-api.git](https://github.com/paulo-czr/task.git)
+git clone https://github.com/paulo-czr/task.git
+
 ```
 2. Execute a aplicação via IDE ou terminal:
 ```
