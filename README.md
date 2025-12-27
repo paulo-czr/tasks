@@ -85,6 +85,17 @@ git clone https://github.com/paulo-czr/task.git
 
 ---
 
+## Requisições HTTP
+| ![](screenshot/post.png) | ![](screenshot/get.png) | ![](screenshot/put.png) |
+|:--:|:--:|:--:|
+| POST | GET | PUT |
+
+| ![](screenshot/patch.png) | ![](screenshot/delete.png) |   |
+|:--:|:--:|:--:|
+| PATCH | DELETE |   |
+
+
+
 ## Autor
 
 Desenvolvido por **Paulo Cesar**  
