@@ -92,7 +92,7 @@ git clone https://github.com/paulo-czr/task.git
 
 | ![](screenshot/patch.png) | ![](screenshot/delete.png) |   |
 |:--:|:--:|:--:|
-| PATCH | DELETE |   |
+| PATCH | DELETE |
 
 ---
   
