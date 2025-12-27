@@ -94,7 +94,8 @@ git clone https://github.com/paulo-czr/task.git
 |:--:|:--:|:--:|
 | PATCH | DELETE |   |
 
-
+---
+  
 
 ## Autor
 
