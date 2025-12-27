@@ -11,12 +11,25 @@ O projeto foca em seguir as melhores práticas de desenvolvimento, como arquitet
   </a>
 </p>
 
-  ---
+---
+
+## Sumário
+
+- [Inicio](#sumário)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Arquitetura](#arquitetura)
+- [Endpoints](#endpoints-da-api)
+- [Conceitos Aplicados](#conceitos-aplicados)
+- [Como executar](#como-executar-o-projeto)
+- [Requisições HTTP](#requisições-http)
+- [Autor](#autor)
+
+---
 
 ## Tecnologias Utilizadas
 
 - Java 21
-- Spring Boot 4.0.1
+- Spring Boot 3.4.1
 - Spring Data JPA (Persistência de dados)
 - H2 Database (Banco de dados em memória para testes rápidos)
 - Lombok (Produtividade e código limpo)
