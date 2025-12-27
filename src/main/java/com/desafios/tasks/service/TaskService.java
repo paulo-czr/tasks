@@ -25,15 +25,9 @@ public class TaskService {
      * @param task A Tarefa a ser criada
      * @return retorna a tarefa que foi criada
      */
-    @Transactional  
+    @Transactional
     public Task create(Task task) {
-        if (task.getId() != null) {
-            throw new IllegalArgumentException("Task não pode ter ID.");
-        }
-
-        if (task.getTitle() == null || task.getTitle().isBlank()) {
-            throw new IllegalArgumentException("Título é obrigatório");
-        }
+        securityCheck(task);
 
         return taskRepository.save(task);
     }
@@ -67,12 +61,10 @@ public class TaskService {
      */
     @Transactional
     public Task updateTask(Long id, Task updatedTask) {
+        securityCheck(updatedTask);
+
         Task existingTask = taskRepository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException("Tarefa não encontrada para atualização."));
-
-        if (updatedTask.getTitle() == null || updatedTask.getTitle().isBlank()) {
-            throw new IllegalArgumentException("Título é obrigatório");
-        }
 
         existingTask.setTitle(updatedTask.getTitle());
         existingTask.setDescription(updatedTask.getDescription());
@@ -112,4 +104,32 @@ public class TaskService {
 
         taskRepository.deleteById(id);
     }
+
+    /**
+     * Verificação de segurança
+     * @param task a Tarefa a ser verificada
+     */
+    public void securityCheck(Task task) {
+        if (task == null) {
+            throw new IllegalArgumentException("Os dados da Tarefa não podem ser nulos.");
+        }
+
+        String title = task.getTitle();
+        if (title == null || title.isBlank()) {
+            throw new IllegalArgumentException("O Título é obrigatório.");
+        }
+
+        task.setTitle(title.trim());
+        if (task.getTitle().length() < 3 || task.getTitle().length() > 150) {
+            throw new IllegalArgumentException("O título deve ter entre 3 e 150 caracteres.");
+        }
+        
+        if (task.getDescription() != null) {
+            task.setDescription(task.getDescription().trim());
+            if (task.getDescription().length() > 700) {
+                throw new IllegalArgumentException("A descrição é muito longa.");
+            }
+        }
+    }
+
 }
