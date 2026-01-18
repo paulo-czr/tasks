@@ -89,13 +89,31 @@ Exemplo de JSON para Criação (POST):
 git clone https://github.com/paulo-czr/task.git
 
 ```
-2. Execute a aplicação via IDE ou terminal:
+
+2. Crie um Banco de Dados MySQL
+```SQL
+CREATE DATABASE taskdb;
+```
+
+3. Configure o arquivo "application.properties"
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/taskdb
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+```
+
+4. Execute a aplicação
 ```
 ./mvnw spring-boot:run
 ```
-3. Acesse a API em: http://localhost:8080/api/tasks
-4. Console do Banco H2: http://localhost:8080/h2-console
-
+5. Acesse a API em: 
+```
+http://localhost:8080/api/tasks
+```
 ---
 
 ## Requisições HTTP
