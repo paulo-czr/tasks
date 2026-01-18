@@ -4,6 +4,7 @@
 
 Uma API RESTful para gerenciamento de tarefas desenvolvida como parte de um desafio prático de Spring Boot. 
 O projeto foca em seguir as melhores práticas de desenvolvimento, como arquitetura em camadas e padrões REST.  
+> Este projeto será futuramente preparado para execução com **Docker + MySQL**.
 
   <p align="center">
   <a href="https://skillicons.dev">
