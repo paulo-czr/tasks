@@ -31,9 +31,10 @@ O projeto foca em seguir as melhores práticas de desenvolvimento, como arquitet
 - Java 21
 - Spring Boot 3.4.1
 - Spring Data JPA (Persistência de dados)
-- H2 Database (Banco de dados em memória para testes rápidos)
+- MySQL (Banco de dados relacional)
 - Lombok (Produtividade e código limpo)
 - Jakarta Persistence (Mapeamento Objeto-Relacional)
+- Maven (Gerenciamento de dependências)
 
 ---
 
@@ -83,6 +84,13 @@ Exemplo de JSON para Criação (POST):
 ---
 
 ## Como executar o projeto
+
+#### Pré-requisitos
+- Java 21
+- Maven
+- MySQL instalado e em execução
+
+#### Passo a Passo
 
 1. Clone o repositório:
 ```
